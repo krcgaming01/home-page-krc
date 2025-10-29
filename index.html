@@ -55,6 +55,11 @@
         },
       };
     </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body class="bg-[#0f0f0f] flex flex-col justify-start min-h-screen">
     <!-- Inicio da Navegação -->
@@ -64,29 +69,30 @@
       <img src="img/logo_sem_escrita-removebg-preview.webp" alt="logokrc" class="logosem">
       <ul class="menu">
         <li>
-          <a href="#" class="text-white text-sm hover:text-gray-400">Time</a>
+          <a href="#times" class="text-white text-sm hover:text-gray-400">Time</a>
         </li>
         <li>
-          <a href="#" class="text-white text-sm hover:text-gray-400"
+          <a href="#partidas" class="text-white text-sm hover:text-gray-400"
             >Partidas</a
           >
         </li>
         <li>
-          <a href="#" class="text-white text-sm hover:text-gray-400"
+          <a href="#noticias" class="text-white text-sm hover:text-gray-400"
             >Notícias</a
           >
         </li>
         <li>
-          <a href="#" class="text-white text-sm hover:text-gray-400">Loja</a>
+          <a href="#loja" class="text-white text-sm hover:text-gray-400">Loja</a>
         </li>
         <li>
-          <a href="#" class="text-white text-sm hover:text-gray-400"
+          <a href="#contatos" class="text-white text-sm hover:text-gray-400"
             >Contatos</a
           >
         </li>
       </ul>
       <img src="img/brasil.png" class="h-8" alt="brasil" />
     </nav>
+   
     <style>
 
       .logosem {
@@ -125,16 +131,27 @@
     margin-left: 20px;
     cursor: pointer;
 }
+
+.texto h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif
+}
     </style>
+
+    
     <!-- Fim da Navegação -->
 
     <!-- Inicio da HERO -->
      <!-- Seção principal -->
     <section class="hero">
         <div class="hero-content">
-           <div class="banner"> <img src="img/moletom.webp"Boné Oficial KRC class="produto" > 
+           <div class="banner"> <img src="img/moletom.webp"MOLETOM KRC class="produto" > 
             <div class="texto">
-                <h1>MOLETOM OFICIAL</h1>
+                <h1 class="" >MOLETOM OFICIAL</h1>
                 <button>Disponível agora</button>
                 </div>
             </div>
@@ -230,6 +247,7 @@
     <!-- Fim da OUR DIVISION -->
 
     <!-- Início do HIGHLIGHT -->
+    <div id="partidas" class="w-full max-w-[1200px] mx-auto py-8"></div>
     <div class="w-full max-w-[1200px] mx-auto py-8">
       <h2 class="text-white text-2xl font-haverbrooke text-center my-16">
         PARTIDAS
@@ -239,12 +257,7 @@
       </div>
     <!-- Fim do HIGHLIGHT -->
 
-     <div class="w-full max-w-[1200px] mx-auto py-8">
-      <h2 class="text-white text-2xl font-haverbrooke text-center my-16">
-        NOTÍCIAS
-      </h2>
-      <div class="w-full flex gap-16 justify-center items-center">
-  
+     
   </header>
 <style>
 
@@ -337,35 +350,440 @@ header {
         },
       };
     </script>
-  <main class="">
-    <div class="news-card">
-      <img src="img/camisa_krc-removebg-preview.png" alt="Homebois Jersey">
-      <div class="news-info">
-        <p class="time">2 horas atás • 4 min read</p>
-        <h3 class="text-white text-4xl font-bold font-haverbrooke">A KRC lançou oficialmente sua camisa de 2025.</h3>
-        <p>
-         Revelamos com orgulho nossa mais nova camisa durante uma grande cerimônia.
-          O design elegante apresenta uma mistura perfeita de estética moderna e elementos clássicos, tornando-a um verdadeiro chamariz.
-        </p>
-        <a href="#" class="read-btn">LER MAIS</a>
+ 
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Haverbrooke';
+            src: url('fonts/Haverbrooke.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f0f0f;
+            color: #fff;
+        }
+
+        .news-card {
+            display: flex;
+            background: #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .news-card img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+        .news-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .time {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .read-btn {
+            background: #f90000;
+            color: #000;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            width: fit-content;
+            border-radius: 4px;
+            margin-top: 15px;
+            transition: 0.2s;
+        }
+
+        .read-btn:hover {
+            background: #ff3333;
+        }
+
+         .section-title {
+          font-family: 'Haverbrooke', serif;
+          font-size: 3rem;
+          font-weight: 700;
+          color: #ffffff;
+          text-align: center;
+          margin-bottom: 50px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          position: relative;
+          padding-bottom: 20px;
+      }
+
+      .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 3px;
+          background: #e60000;
+      }
+        
+    </style>
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- SEÇÃO DE NOTÍCIAS -->
+    <!-- ============================================ -->
+    <div id="noticias" class="w-full max-w-[1200px] mx-auto py-8"></div>
+    <div class="w-full max-w-[1200px] mx-auto py-8">
+      <h2 class="text-white text-2xl font-haverbrooke text-center my-16">
+        NOTÍCIAS
+      </h2>
+      <div class="w-full flex gap-16 justify-center items-center">
+        
+        
+        <div class="news-section px-4">
+            <!-- Notícia 1 -->
+            <main class="">
+              <div class="news-card">
+                <img src="img/camisa_krc-removebg-preview.png" alt="Homebois Jersey">
+                <div class="news-info">
+                  <p class="time">2 horas atás • 4 min read</p>
+                  <h3 class="text-white text-4xl font-bold font-haverbrooke">A KRC lançou oficialmente sua camisa de 2025.</h3>
+                  <p>
+                   Revelamos com orgulho nossa mais nova camisa durante uma grande cerimônia.
+                    O design elegante apresenta uma mistura perfeita de estética moderna e elementos clássicos, tornando-a um verdadeiro chamariz.
+                  </p>
+                  <a href="#" class="read-btn">LER MAIS</a>
+                </div>
+              </div>
+          
+            <!-- Notícia 2 -->
+            <div class="news-card">
+                <img src="img/logokrc2.webp" alt="Breno MVP">
+                <div class="news-info">
+                    <p class="time">1 dia atrás • 7 min read</p>
+                    <h3 class="text-white text-4xl font-bold font-haverbrooke">Breno, nosso melhor jogador de clash royale, ganhou a CRL!</h3>
+                    <p>
+                        O único Brasileiro a ganhar um campeonato de clash royale representando a KRC. 
+                        Parabéns @brenolima, estamos muito orgulhosos de você!
+                    </p>
+                    <a href="#" class="read-btn">LER MAIS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+      @font-face {
+          font-family: 'Haverbrooke';
+          src: url('fonts/Haverbrooke.otf') format('opentype');
+          font-weight: 700;
+          font-style: normal;
+          font-display: swap;
+      }
+
+      body {
+          font-family: 'Poppins', sans-serif;
+          background-color: #0f0f0f;
+          color: #fff;
+      }
+
+      .product-card {
+          background: #000000;
+          border: 3px solid #2a2a2a;
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          overflow: hidden;
+      }
+
+      .product-card:hover {
+          transform: translateY(-5px);
+          border-color: #e60000;
+          box-shadow: 0 10px 30px rgba(230, 0, 0, 0.3);
+      }
+
+      .product-image-container {
+          background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 250px;
+      }
+
+      .product-image {
+          max-width: 100%;
+          max-height: 200px;
+          object-fit: contain;
+      }
+
+      .product-info {
+          background: #000000;
+          padding: 20px;
+          text-align: center;
+      }
+
+      .product-name {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #ffffff;
+          margin-bottom: 8px;
+      }
+
+      .product-price {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #e60000;
+      }
+
+      .section-title {
+          font-family: 'Haverbrooke', serif;
+          font-size: 3rem;
+          font-weight: 700;
+          color: #ffffff;
+          text-align: center;
+          margin-bottom: 50px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          position: relative;
+          padding-bottom: 20px;
+      }
+
+      .section-title::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 3px;
+          background: #e60000;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SEÇÃO DE PRODUTOS -->
+  <!-- ============================================ -->
+  <div id="loja" class="w-full max-w-[1200px] mx-auto py-8"></div>
+  <section class="w-full max-w-[1200px] mx-auto py-16 px-4">
+      <h2 class="section-title">Produtos</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Produto 1: Moletom -->
+          <div class="product-card">
+              <div class="product-image-container">
+                  <img src="img/moletomkrc-removebg-preview.png" alt="Moletom KRC" class="product-image">
+              </div>
+              <div class="product-info">
+                  <h3 class="product-name">Moletom KRC</h3>
+                  <p class="product-price">R$249,90</p>
+              </div>
+          </div>
+
+          <!-- Produto 2: Chaveiro -->
+          <div class="product-card">
+              <div class="product-image-container">
+                  <img src="img/chaveirokrc-removebg-preview.png" alt="Chaveiro KRC" class="product-image">
+              </div>
+              <div class="product-info">
+                  <h3 class="product-name">Chaveiro KRC</h3>
+                  <p class="product-price">R$20,00</p>
+              </div>
+          </div>
+
+          <!-- Produto 3: Garrafa Térmica -->
+          <div class="product-card">
+              <div class="product-image-container">
+                  <img src="img/garrafa-removebg-preview.png" alt="Garrafa térmica KRC" class="product-image">
+              </div>
+              <div class="product-info">
+                  <h3 class="product-name">Garrafa térmica KRC</h3>
+                  <p class="product-price">R$59,99</p>
+              </div>
+          </div>
+
+          <!-- Produto 4: Caneca -->
+          <div class="product-card">
+              <div class="product-image-container">
+                  <img src="img/caneca_vermelha-removebg-preview.png" alt="Caneca KRC" class="product-image">
+              </div>
+              <div class="product-info">
+                  <h3 class="product-name">Caneca KRC</h3>
+                  <p class="product-price">R$49,99</p>
+              </div>
+          </div>
+
       </div>
+
+      <!-- Botão Ver Mais -->
+      <div class="text-center mt-10">
+          <a href="loja.html" class="inline-block bg-[#e60000] text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-[#ff3333] transition-all duration-300 shadow-lg hover:shadow-xl">
+              Ver Todos os Produtos
+          </a>
+      </div>
+  </section>
+  </body>
+
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+    body { font-family: 'Quicksand', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-900">
+
+<footer class="w-full bg-[#1a1a1a] text-white">
+  <!-- Seção Principal -->
+  <div id="contatos" class="w-full max-w-[1200px] mx-auto py-8"></div>
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      
+      <!-- Logo -->
+      <div>
+        <img class="w-32 h-auto mb-6" src="img/Group_27-removebg-preview.png" alt="KRC">
+      </div>
+
+      <!-- Termos e Políticas -->
+      <div>
+        <h3 class="text-lg font-bold mb-4 uppercase">Termos e Políticas</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-gray-400 transition">Política de Reembolso</a></li>
+          <li><a href="#" class="hover:text-gray-400 transition">Política de Frete</a></li>
+          <li><a href="#" class="hover:text-gray-400 transition">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h3 class="text-lg font-bold mb-4 uppercase">Inscreva-se e receba todas as novidades!</h3>
+        <form class="space-y-3">
+          <input 
+            type="email" 
+            placeholder="E-mail" 
+            class="w-full px-4 py-3 bg-[#2b2b2b] text-white rounded border-none outline-none focus:ring-2 focus:ring-gray-600"
+          >
+          <button 
+            type="submit" 
+            class="w-full px-4 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition uppercase"
+          >
+            Enviar E-Mail
+          </button>
+          <p class="text-xs text-gray-400 mt-3">
+            Ao assinar, você concorda com os Termos de Uso e a Política de Privacidade.
+          </p>
+        </form>
+      </div>
+
+      <!-- Redes Sociais e Categorias -->
+      <div>
+        <!-- Redes Sociais -->
+        <div class="mb-8">
+          <h3 class="text-lg font-bold mb-4 uppercase">Redes Sociais</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-400 transition">Twitter</a></li>
+            <li><a href="#" target="_blank" class="hover:text-gray-400 transition">Instagram</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">Tiktok</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">Youtube</a></li>
+          </ul>
+        </div>
+
+        <!-- Categorias da Loja -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 uppercase">Categorias da Loja</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-gray-400 transition">SHOP</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">COLEÇÕES</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">SALE</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">COMBOS</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">NEWS</a></li>
+            <li><a href="#" class="hover:text-gray-400 transition">SOBRE A KRC</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
-    <div class="news-card">
-      <img src="img/logokrc2.webp" alt="Fafau MVP">
-      <div class="news-info">
-        <p class="time">1 dia atrás • 7 min read</p>
-        <h3 class="text-white text-4xl font-bold font-haverbrooke">Breno, nosso melhor jogador de clash royale, ganhou a CRL!</h3>
-        <p>
-          O unico Brasileiro a ganhar um campeonato de clash royale represetando a Krc. parabéns @brenolima
-          estamos muito orgulhosos de você!
-        </p>
-        <a href="#" class="read-btn">LER MAIS</a>
-        
-       
+    <!-- Ícones das Redes Sociais -->
+    <div class="flex justify-center gap-6 mt-12 pt-8 border-t border-gray-700">
+      <a href="#" class="text-2xl hover:text-gray-400 transition" aria-label="Twitter">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/t3rrifiergg" target="_blank" class="text-2xl hover:text-gray-400 transition" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" class="text-2xl hover:text-gray-400 transition" aria-label="TikTok">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="#" class="text-2xl hover:text-gray-400 transition" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+  </div>
 
+  <!-- Copyright e Patrocinadores -->
+  <div class="bg-[#0d0d0d] py-8">
+    <div class="max-w-7xl mx-auto px-6">
       
-  
-  </header>
-  </body>
+      <!-- Patrocinadores -->
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 mb-8">
+        <img class="w-28 md:w-36 h-auto grayscale hover:grayscale-0 transition opacity-70 hover:opacity-100" src="img/loide_mono.png" alt="Loide">
+        <img class="w-28 md:w-36 h-auto grayscale hover:grayscale-0 transition opacity-70 hover:opacity-100" src="img/Group_27-removebg-preview.png" alt="Patrocinador">
+        <img class="w-28 md:w-36 h-auto grayscale hover:grayscale-0 transition opacity-70 hover:opacity-100" src="img/nb branca.png" alt="New balance">
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center text-sm text-gray-400">
+        <p>© Copyright, <a href="#" class="underline hover:text-white transition">Knight Rising Champions</a>, 2025. Todos os direitos reservados</p>
+      </div>
+
+      <!-- Formas de Pagamento -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mt-8">
+        <div class="bg-white px-3 py-2 rounded">
+          <span class="text-blue-600 font-bold text-xs">VISA</span>
+        </div>
+        <div class="bg-white px-3 py-2 rounded flex items-center justify-center">
+          <div class="w-8 h-8 bg-gray-800 rounded-full"></div>
+        </div>
+        <div class="bg-white px-3 py-2 rounded">
+          <span class="text-black font-bold text-xs">ELO</span>
+        </div>
+        <div class="bg-white px-3 py-2 rounded">
+          <span class="text-orange-600 font-bold text-xs">Discover</span>
+        </div>
+        <div class="bg-white px-3 py-2 rounded">
+          <span class="text-teal-600 font-bold text-xs">PIX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão WhatsApp Flutuante -->
+  <a 
+    href="https://wa.me/5521999999999" 
+    target="_blank"
+    class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 z-50"
+    aria-label="WhatsApp"
+  >
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+</footer>
+
+</body>
+</html>
+
+</body>
 </html>
